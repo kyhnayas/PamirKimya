@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import SectorCard from '@/components/SectorCard';
 import DocumentCenter from '@/components/DocumentCenter';
+import DilutionCard from '@/components/DilutionCard';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { ShieldAlert, CheckCircle, ArrowRight, FlaskConical, Award, Recycle } from 'lucide-react';
@@ -51,7 +52,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      
+
       <main className="flex-1">
         {/* Entrance Hero Banner */}
         <Hero />
@@ -59,7 +60,7 @@ export default function Home() {
         {/* Sectors Overview Section */}
         <section className="py-24 bg-white relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
+
             {/* Section Header */}
             <div className="text-center max-w-3xl mx-auto mb-20">
               <span className="text-secondary text-xs font-extrabold uppercase tracking-widest bg-teal-50 px-3.5 py-1.5 rounded-full border border-teal-150">
@@ -145,6 +146,9 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Dilution Calculator Card Section */}
+        <DilutionCard />
+
         {/* Document Center Section */}
         <DocumentCenter />
 
@@ -152,17 +156,17 @@ export default function Home() {
         <section className="py-20 bg-white">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-display font-black text-primary mb-6">
-              Projeniz veya Tesisiniz İçin Numune İsteyin
+              Projeniz veya Tesisiniz İçin İletişime Geçin
             </h2>
             <p className="text-text-slate text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-              Pamir Kimya Biyogüvenlik Çözümlerini kendi işletmenizde, veteriner kliniğinizde veya dental ünitenizde deneyimlemeniz için test numuneleri hazırlıyoruz.
+              Pamir Kimya Biyogüvenlik Çözümlerini kendi işletmenizde, veteriner kliniğinizde veya dental ünitenizde deneyimlemeniz için iletişime geçebilirsiniz.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
               <Link
                 href="/iletisim"
                 className="w-full sm:w-auto bg-secondary hover:bg-teal-700 text-white font-extrabold px-8 py-4 rounded-lg text-base transition duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-teal-900/10 hover-lift"
               >
-                <span>Numune Talep Formu</span>
+                <span>İletişime Geçin</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <a

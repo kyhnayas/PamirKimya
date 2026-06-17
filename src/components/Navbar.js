@@ -35,11 +35,10 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        showGlass
-          ? 'glass-panel shadow-lg py-3'
-          : 'bg-transparent py-5'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${showGlass
+        ? 'glass-panel shadow-lg py-3'
+        : 'bg-transparent py-5'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -63,13 +62,12 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`text-sm font-semibold tracking-wide transition-colors duration-200 ${
-                    isActive
-                      ? 'text-secondary font-bold'
-                      : showGlass
+                  className={`text-sm font-semibold tracking-wide transition-colors duration-200 ${isActive
+                    ? 'text-secondary font-bold'
+                    : showGlass
                       ? 'text-primary hover:text-secondary'
                       : 'text-primary hover:text-secondary md:text-white md:hover:text-accent'
-                  }`}
+                    }`}
                 >
                   {link.name}
                 </Link>
@@ -79,23 +77,13 @@ export default function Navbar() {
 
           {/* Desktop CTA / Phone Info */}
           <div className="hidden md:flex items-center space-x-4">
-            <a
-              href="tel:+905435746458"
-              className={`flex items-center space-x-1.5 text-sm font-bold transition-colors ${
-                showGlass
-                  ? 'text-primary hover:text-secondary'
-                  : 'text-primary hover:text-secondary md:text-white md:hover:text-accent'
-              }`}
-            >
-              <Phone className="w-4 h-4 stroke-[2.5]" />
-              <span>0543 574 64 58</span>
-            </a>
+
             <Link
               href="/iletisim#form-section"
               className="bg-secondary hover:bg-teal-700 text-white font-bold py-2.5 px-4 rounded-md transition duration-300 text-sm flex items-center space-x-2 hover-lift"
             >
               <FileText className="w-4 h-4" />
-              <span>Numune Talep Et</span>
+              <span>İletişime Geçin</span>
             </Link>
           </div>
 
@@ -103,11 +91,10 @@ export default function Navbar() {
           <div className="flex items-center md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`inline-flex items-center justify-center p-2 rounded-md focus:outline-none ${
-                showGlass 
-                  ? 'text-primary hover:text-secondary' 
-                  : 'text-white hover:text-teal-300'
-              }`}
+              className={`inline-flex items-center justify-center p-2 rounded-md focus:outline-none ${showGlass
+                ? 'text-primary hover:text-secondary'
+                : 'text-white hover:text-teal-300'
+                }`}
               aria-expanded="false"
             >
               <span className="sr-only">Menüyü aç</span>
@@ -119,9 +106,8 @@ export default function Navbar() {
 
       {/* Mobile Slide-down Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-100 shadow-xl transition-all duration-300 ease-in-out ${
-          isOpen ? 'opacity-100 max-h-screen py-4 block' : 'opacity-0 max-h-0 hidden'
-        }`}
+        className={`md:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-100 shadow-xl transition-all duration-300 ease-in-out ${isOpen ? 'opacity-100 max-h-screen py-4 block' : 'opacity-0 max-h-0 hidden'
+          }`}
       >
         <div className="px-4 pt-2 pb-4 space-y-1 sm:px-3">
           {navLinks.map((link) => {
@@ -131,30 +117,23 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className={`block px-3 py-2.5 rounded-md text-base font-semibold transition-colors ${
-                  isActive
-                    ? 'bg-teal-50 text-secondary'
-                    : 'text-primary hover:bg-gray-50 hover:text-secondary'
-                }`}
+                className={`block px-3 py-2.5 rounded-md text-base font-semibold transition-colors ${isActive
+                  ? 'bg-teal-50 text-secondary'
+                  : 'text-primary hover:bg-gray-50 hover:text-secondary'
+                  }`}
               >
                 {link.name}
               </Link>
             );
           })}
           <div className="pt-4 border-t border-gray-100 mt-2 space-y-3 px-3">
-            <a
-              href="tel:+905435746458"
-              className="flex items-center space-x-2 text-primary hover:text-secondary font-bold text-base"
-            >
-              <Phone className="w-5 h-5 stroke-[2.5]" />
-              <span>0543 574 64 58</span>
-            </a>
+
             <Link
               href="/iletisim#form-section"
               onClick={() => setIsOpen(false)}
               className="w-full bg-secondary hover:bg-teal-700 text-white font-bold py-3 px-4 rounded-md transition duration-300 text-center block"
             >
-              Numune & Teknik Bilgi Talep
+              İletişime Geçin
             </Link>
           </div>
         </div>

@@ -7,7 +7,7 @@ export default function SectorCard({ sector }) {
 
   return (
     <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-gray-100 transition-all duration-300 flex flex-col group hover-lift h-full">
-      
+
       {/* Card Image Area */}
       <div className="relative h-64 w-full overflow-hidden">
         <Image
@@ -30,7 +30,7 @@ export default function SectorCard({ sector }) {
 
       {/* Card Content Area */}
       <div className="p-6 flex-1 flex flex-col justify-between">
-        
+
         {/* Solutions List */}
         <ul className="space-y-3 mb-8">
           {points.map((point, idx) => (
@@ -50,7 +50,7 @@ export default function SectorCard({ sector }) {
           <ArrowRight className="w-4 h-4 ml-1.5 transform group-hover:translate-x-1 transition-transform" />
         </Link>
       </div>
-      
+
     </div>
   );
 }

@@ -1,50 +1,32 @@
-'use client';
-
-import { useState } from 'react';
-import { FileText, Download, Shield, BookOpen, Check } from 'lucide-react';
+import { Shield, BookOpen } from 'lucide-react';
 
 export default function DocumentCenter() {
-  const [downloadingFile, setDownloadingFile] = useState(null);
-  const [showModal, setShowModal] = useState(false);
-
   const documents = [
     {
       title: 'Yeditepe Üniversitesi Raporu',
       description: 'Gıda sanayisi ve klinik ortamlarındaki en zorlu patojenleri %99,999 saniyeler içinde kırdığını kanıtlayan resmi rapor.',
-      filename: 'Yeditepe_Universitesi_Analiz_Raporu.pdf',
-      type: 'PDF / Analiz Raporu',
+      type: 'Analiz Raporu',
       badge: 'Akademik Onay',
     },
     {
       title: 'Sağlık Bakanlığı Ruhsatı',
       description: 'T.C. Sağlık Bakanlığı onaylı resmi Biyosidal Ürün Ruhsatnamesi. İl/İlçe tarım müdürlükleri denetimlerine tam uyum sağlar.',
-      filename: 'Saglik_Bakanligi_Biyosidal_Ruhsat_Belgesi.pdf',
-      type: 'PDF / Ruhsat Belgesi',
+      type: 'Ruhsat Belgesi',
       badge: 'Resmi Mevzuat',
     },
     {
       title: 'Güvenlik Bilgi Formu (MSDS)',
       description: 'Gıda tesisleri ve büyük hastanelerin İş Sağlığı ve Güvenliği (İSG) departmanlarının aradığı, Türkçe / İngilizce standart MSDS formu.',
-      filename: 'Silveroxy_MSDS_TR.pdf',
-      type: 'PDF / Güvenlik Formu',
+      type: 'Güvenlik Formu',
       badge: 'İSG Standardı',
     },
     {
       title: 'TS EN 14476 Antiviral Rapor',
       description: 'Ürünün en dirençli zarflı ve zarfsız virüslere (Hepatit, HIV, Coronavirüsler vb.) karşı antiviral başarısını kanıtlayan test sertifikası.',
-      filename: 'EN_14476_Antiviral_Basari_Sertifikasi.pdf',
-      type: 'PDF / Antiviral Test',
+      type: 'Antiviral Test',
       badge: 'Antiviral',
     },
   ];
-
-  const handleDownload = (filename) => {
-    setDownloadingFile(filename);
-    setShowModal(true);
-    setTimeout(() => {
-      setShowModal(false);
-    }, 2200);
-  };
 
   return (
     <section id="akademik" className="py-24 bg-bg-light scroll-mt-20">
@@ -69,9 +51,9 @@ export default function DocumentCenter() {
           {documents.map((doc, index) => (
             <div 
               key={index}
-              className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition flex flex-col justify-between group"
+              className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition group flex flex-col justify-between"
             >
-              <div className="mb-6">
+              <div>
                 <div className="text-secondary text-3xl font-extrabold mb-4 font-display">
                   {String(index + 1).padStart(2, '0')}
                 </div>
@@ -87,19 +69,10 @@ export default function DocumentCenter() {
                 <h3 className="text-lg font-bold text-primary mb-2 group-hover:text-secondary transition-colors">
                   {doc.title}
                 </h3>
-                <p className="text-text-slate text-xs leading-relaxed line-clamp-4">
+                <p className="text-text-slate text-xs leading-relaxed">
                   {doc.description}
                 </p>
               </div>
-
-              {/* Download Action Button */}
-              <button
-                onClick={() => handleDownload(doc.filename)}
-                className="w-full py-2.5 px-4 bg-secondary hover:bg-teal-700 text-white font-semibold text-sm rounded-lg text-center transition flex items-center justify-center space-x-2 cursor-pointer hover-lift"
-              >
-                <Download className="w-4 h-4" />
-                <span>PDF İndir</span>
-              </button>
             </div>
           ))}
         </div>
@@ -110,33 +83,7 @@ export default function DocumentCenter() {
         </div>
 
       </div>
-
-      {/* Download Modal Simulation */}
-      {showModal && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-primary/70 backdrop-blur-sm">
-          <div className="bg-white p-6 sm:p-8 rounded-3xl border border-gray-100 shadow-2xl max-w-sm w-full mx-4 text-center space-y-4">
-            <div className="w-16 h-16 bg-teal-50 text-secondary rounded-full flex items-center justify-center text-3xl mx-auto animate-pulse">
-              <Check className="w-8 h-8 stroke-[3]" />
-            </div>
-            <h4 className="text-lg font-bold text-primary">Akademik Rapor Hazırlanıyor</h4>
-            <p className="text-text-slate text-xs sm:text-sm font-mono bg-bg-light p-2.5 rounded-lg break-all">
-              {downloadingFile}
-            </p>
-            <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden relative">
-              <div className="h-full bg-secondary rounded-full absolute top-0 left-0 animate-[loadingBar_2s_ease-out_forwards] w-full" />
-            </div>
-            <p className="text-xs text-slate-400">Güvenli indirme işlemi saniyeler içinde başlayacaktır.</p>
-          </div>
-        </div>
-      )}
-
-      {/* Embedded loader animation style */}
-      <style jsx>{`
-        @keyframes loadingBar {
-          0% { width: 0%; }
-          100% { width: 100%; }
-        }
-      `}</style>
     </section>
   );
 }
+

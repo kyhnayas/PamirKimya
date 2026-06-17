@@ -13,12 +13,12 @@ export default function Products() {
   return (
     <>
       <Navbar />
-      
+
       <main className="flex-1 pt-24 bg-white">
-        
+
         {/* Banner Section */}
         <section className="bg-primary text-white py-20 relative overflow-hidden">
-          <div 
+          <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-25 mix-blend-multiply"
             style={{ backgroundImage: `url('/assets/hero-bg.jpg')` }}
           />
@@ -36,12 +36,12 @@ export default function Products() {
         </section>
 
         {/* Dynamic Sector Details - Alternating Layout */}
-        
+
         {/* Sector 1: Food/Milk CIP */}
         <section id="gida" className="py-24 bg-white border-b border-slate-100 scroll-mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-              
+
               <div className="lg:col-span-5 relative h-[450px] w-full rounded-2xl overflow-hidden shadow-xl border border-gray-150">
                 <Image
                   src="/assets/sector-food.jpg"
@@ -105,7 +105,7 @@ export default function Products() {
                     href="/iletisim#form-section"
                     className="inline-flex items-center bg-primary hover:bg-blue-900 text-white font-bold py-3 px-6 rounded-lg text-sm transition shadow hover-lift"
                   >
-                    <span>CIP Numunesi Talep Et</span>
+                    <span>İletişime Geçin</span>
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>
@@ -119,7 +119,7 @@ export default function Products() {
         <section id="veteriner" className="py-24 bg-bg-light border-b border-slate-100 scroll-mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-              
+
               {/* Desktop order change to make it alternate */}
               <div className="lg:col-span-7 space-y-6 lg:order-1 order-2">
                 <div className="inline-flex items-center space-x-2 bg-teal-50 text-secondary px-3 py-1 rounded-full text-xs font-bold uppercase border border-teal-150">
@@ -175,7 +175,7 @@ export default function Products() {
                     href="/iletisim#form-section"
                     className="inline-flex items-center bg-secondary hover:bg-teal-700 text-white font-bold py-3 px-6 rounded-lg text-sm transition shadow hover-lift"
                   >
-                    <span>Klinik Numunesi Talep Et</span>
+                    <span>İletişime Geçin</span>
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>
@@ -198,7 +198,7 @@ export default function Products() {
         <section id="dental" className="py-24 bg-white scroll-mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-              
+
               <div className="lg:col-span-5 relative h-[450px] w-full rounded-2xl overflow-hidden shadow-xl border border-gray-150">
                 <Image
                   src="/assets/sector-dental.jpg"
@@ -254,7 +254,7 @@ export default function Products() {
                     href="/iletisim#form-section"
                     className="inline-flex items-center bg-primary hover:bg-blue-900 text-white font-bold py-3 px-6 rounded-lg text-sm transition shadow hover-lift"
                   >
-                    <span>Dental Numunesi Talep Et</span>
+                    <span>İletişime Geçin</span>
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>
