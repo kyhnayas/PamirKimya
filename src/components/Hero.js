@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, ShieldCheck, Zap } from 'lucide-react';
 
 export default function Hero() {
@@ -52,60 +53,90 @@ export default function Hero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-teal-400"></span>
               </span>
-              Yeditepe Üniversitesi Onaylı %99.999 Kırım Sinerjisi
+              Endüstriyel Hijyen ve Biyogüvenlik Çözümleri
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black font-display tracking-tight leading-none text-white">
-              Kimyasal Yük Değil,<br />
-              <span className="text-teal-400">Oksijen Konforu!</span>
+              Endüstriyel Hijyen ve<br />
+              Oksidasyon Teknolojilerinde<br />
+              <span className="text-teal-400">Güvenilir Çözüm Ortağınız</span>
             </h1>
 
             <p className="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed max-w-2xl font-light">
-              Alkol, klor ve aldehit içermeyen tescilli Hidrojen Peroksit & Kolloidal Gümüş (H₂O₂ + Ag) sinerjisi. Saniyeler içinde %99,999 mikrobiyolojik kırım sağlar, reaksiyon sonrası sadece su ve oksiyene dönüşür.
+              Gıda, içecek, su ve üretim tesisleri için yenilikçi, tescilli ve yüksek standartlı hijyen teknolojileri sunuyoruz.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link
-                href="/urunler"
+                href="/#sektorler"
                 className="inline-flex items-center justify-center px-6 py-3.5 border border-transparent text-base font-semibold rounded-lg text-primary bg-teal-400 hover:bg-teal-300 shadow-lg hover:shadow-xl transition duration-150 hover-lift"
               >
-                Sektörel Çözümleri Keşfet
+                Hizmet Verdiğimiz Sektörler
               </Link>
               <Link
                 href="/iletisim"
                 className="inline-flex items-center justify-center px-6 py-3.5 border border-white/30 text-base font-semibold rounded-lg text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm transition duration-150 hover-lift"
               >
                 <Zap className="w-5 h-5 text-teal-400 mr-2" />
-                Teknik Bilgi
+                Teklif Talebi
               </Link>
             </div>
           </div>
 
-          {/* Right Column: Premium Interactive Molecular Layout */}
+          {/* Right Column: Premium Corporate Industrial Layout */}
           <div className="lg:col-span-5 flex justify-center items-center">
-            <div className="relative w-72 h-72 sm:w-96 sm:h-96 md:w-[420px] md:h-[420px] bg-white/5 rounded-full p-8 border border-white/10 shadow-2xl backdrop-blur-sm flex items-center justify-center">
-
-              {/* Orbits animations */}
-              <div className="absolute inset-4 rounded-full border border-teal-500/20 animate-[spin_40s_linear_infinite]" />
-              <div className="absolute inset-12 rounded-full border border-slate-300/10 animate-[spin_25s_linear_infinite_reverse]" />
-
-              {/* Core Active Molecules Layout Card */}
-              <div className="relative flex flex-col items-center justify-center text-center p-6 bg-gradient-to-b from-blue-950 to-primary border border-white/10 rounded-3xl shadow-inner w-56 h-56 sm:w-64 sm:h-64">
-                <span className="text-slate-200 text-6xl sm:text-7xl font-extrabold tracking-wider font-display">Ag<sup className="text-teal-400 text-3xl font-medium">+</sup></span>
-                <span className="text-teal-400 text-lg sm:text-xl font-bold mt-2">Kolloidal Gümüş</span>
-                <div className="h-px w-2/3 bg-white/10 my-2" />
-                <span className="text-white text-3xl font-extrabold">H₂O₂</span>
-                <span className="text-slate-400 text-xs sm:text-sm font-semibold uppercase tracking-widest mt-1">Hidrojen Peroksit</span>
+            <div className="relative w-full max-w-[420px] aspect-square flex items-center justify-center">
+              
+              {/* Outer decorative ring */}
+              <div className="absolute inset-0 rounded-full border border-teal-500/20 animate-[spin_60s_linear_infinite] pointer-events-none" />
+              
+              {/* Background Glow */}
+              <div className="absolute w-72 h-72 bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
+              
+              {/* Overlapping Image Stack */}
+              {/* Card 1: Factory Production Line (sector-food.jpg) */}
+              <div className="relative w-[280px] sm:w-[320px] aspect-[4/3] rounded-2xl overflow-hidden border-4 border-white/10 shadow-2xl z-10 transition-transform duration-500 hover:scale-[1.03]">
+                <Image
+                  src="/assets/sector-food.jpg"
+                  alt="Endüstriyel Hijyen ve Üretim Hattı"
+                  fill
+                  sizes="(max-width: 768px) 280px, 320px"
+                  priority
+                  className="object-cover"
+                />
+                {/* Dark overlay with gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <span className="text-[10px] sm:text-xs font-bold text-teal-300 uppercase tracking-widest block mb-0.5">Endüstriyel Hijyen</span>
+                  <span className="text-sm sm:text-base font-extrabold text-white leading-tight block">CIP ve Hat Sanitasyonu</span>
+                </div>
               </div>
 
-              {/* Orbiting Active Oxygen */}
-              <div className="absolute top-8 right-8 bg-gradient-to-r from-teal-400 to-teal-600 rounded-full w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center text-white font-extrabold border-2 border-white shadow-lg animate-bounce">
-                O₂
+              {/* Card 2: Pure water/laboratory representation (hero-bg.jpg) */}
+              <div className="absolute w-[200px] sm:w-[240px] aspect-[4/3] rounded-2xl overflow-hidden border-4 border-teal-500/25 shadow-2xl z-20 -bottom-6 -right-4 sm:-right-8 transition-transform duration-500 hover:scale-[1.05]">
+                <Image
+                  src="/assets/hero-bg.jpg"
+                  alt="Oksidasyon ve Dezenfeksiyon Teknolojisi"
+                  fill
+                  sizes="(max-width: 768px) 200px, 240px"
+                  priority
+                  className="object-cover"
+                />
+                {/* Dark overlay with gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
+                <div className="absolute bottom-3 left-3 right-3">
+                  <span className="text-[9px] sm:text-[10px] font-bold text-teal-300 uppercase tracking-widest block mb-0.5">Ar-Ge ve Teknoloji</span>
+                  <span className="text-xs sm:text-sm font-extrabold text-white leading-tight block">Kalıntısız Oksidasyon</span>
+                </div>
               </div>
 
-              {/* Secondary Silver Node */}
-              <div className="absolute bottom-12 left-6 bg-blue-950 border-2 border-slate-300 rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-slate-300 font-bold text-xs shadow-md">
-                Ag
+              {/* Decorative Tech Badges */}
+              <div className="absolute -top-4 -left-4 bg-primary/90 backdrop-blur-md border border-teal-500/30 rounded-xl px-3 py-2 z-30 shadow-lg text-center flex items-center gap-2">
+                <ShieldCheck className="w-5 h-5 text-teal-400" />
+                <div className="text-left">
+                  <span className="text-[9px] text-slate-400 uppercase tracking-wider block font-bold">Güvence</span>
+                  <span className="text-xs font-black text-white block">Tescilli Ar-Ge</span>
+                </div>
               </div>
 
             </div>

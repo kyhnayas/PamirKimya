@@ -25,7 +25,7 @@ export default function About() {
               Kurumsal & Hakkımızda
             </h1>
             <p className="text-slate-300 text-lg max-w-2xl mx-auto font-light leading-relaxed">
-              Kimyasal yük ve toksisite bırakmadan üstün biyogüvenlik sağlayan ekolojik teknolojilerin öncüsüyüz.
+              Endüstriyel tesisler için kimyasal yük ve toksisite bırakmadan üstün hijyen sağlayan ekolojik teknolojilerin çözüm ortağıyız.
             </p>
           </div>
         </section>
@@ -41,16 +41,16 @@ export default function About() {
                   Pamir Kimya Farkı
                 </span>
                 <h2 className="text-3xl font-display font-black text-primary leading-tight">
-                  Geleceğin Dezenfeksiyon Teknolojisi
+                  Endüstriyel Hijyen ve Dezenfeksiyon Teknolojileri
                 </h2>
                 <p className="text-text-slate leading-relaxed">
-                  Pamir Kimya Biyogüvenlik ve Teknoloji Çözümleri, endüstriyel tesisler, hayvancılık/veteriner sektörü ve tıp/diş hekimliği uygulamaları için yenilikçi dezenfeksiyon çözümleri sunan vizyoner bir kuruluştur. 
+                  Pamir Kimya Biyogüvenlik ve Teknoloji Çözümleri, gıda, içecek, su dolum ve entegre üretim tesisleri için yenilikçi oksidasyon ve hijyen teknolojileri sunan vizyoner bir kuruluştur.
                 </p>
                 <p className="text-text-slate leading-relaxed">
-                  Geleneksel alkol, klor, aldehit ve amonyum bileşikleri gibi çevreye ve canlı dokulara zarar veren, korozyon yaratan dezenfektanlar yerine; reaksiyon sonrası tamamen doğal bileşenler olan <strong>su (H₂O) ve oksijene (O₂)</strong> ayrışan tescilli Hidrojen Peroksit ve Kolloidal Gümüş (H₂O₂ + Ag) formülasyonlarını yaygınlaştırmayı hedefliyoruz.
+                  Geleneksel klor, alkol ve aldehit gibi çevreye ve makinelere zarar veren dezenfektanlar yerine; reaksiyon sonrası tamamen doğal bileşenler olan <strong>su (H₂O) ve oksijene (O₂)</strong> ayrışan tescilli Hidrojen Peroksit ve Kolloidal Gümüş formülasyonlarını sanayide yaygınlaştırmayı hedefliyoruz.
                 </p>
                 <p className="text-text-slate leading-relaxed">
-                  Türkiye genelindeki tek yetkili dağıtım haklarını elinde bulunduran yöneticimiz <strong>Yavuz Selim Ekşi</strong> önderliğinde, kaliteden ödün vermeden en hassas biyogüvenlik problemlerine dahi kalıcı ve güvenli çözümler üretiyoruz.
+                  Türkiye genelindeki güçlü dağıtım haklarımız ve yöneticimiz <strong>Yavuz Selim Ekşi</strong> önderliğindeki uzman ekiplerimizle, kaliteden ödün vermeden en hassas endüstriyel biyogüvenlik problemlerine dahi kalıcı ve güvenli çözümler üretiyoruz.
                 </p>
               </div>
 
@@ -65,8 +65,8 @@ export default function About() {
                   <div className="flex items-start">
                     <CheckCircle2 className="w-5 h-5 text-secondary mr-3 mt-1 flex-shrink-0" />
                     <div>
-                      <p className="font-semibold text-primary">Yeditepe Üniversitesi Ruhsatlandırma Onayı</p>
-                      <p className="text-sm text-text-slate">Mikroorganizmalar, sporlu bakteriler ve mantarlara karşı %99,999 etki tescillenmiştir.</p>
+                      <p className="font-semibold text-primary">Yeditepe Üniversitesi Biyosidal Onaylı</p>
+                      <p className="text-sm text-text-slate">Et ve tavuk kesim hatları, çiğ süt tankerleri ve su dolum tesislerinde mikroorganizmalara karşı %99,999 etki tescillenmiştir.</p>
                     </div>
                   </div>
 
@@ -74,7 +74,7 @@ export default function About() {
                     <CheckCircle2 className="w-5 h-5 text-secondary mr-3 mt-1 flex-shrink-0" />
                     <div>
                       <p className="font-semibold text-primary">T.C. Sağlık Bakanlığı Biyosidal Ruhsatlı</p>
-                      <p className="text-sm text-text-slate">Mevzuata ve Avrupa Biyosidal Ürünler Yönetmeliği standartlarına tam uyum.</p>
+                      <p className="text-sm text-text-slate">Gıda denetimleri, BRC, IFS ve ISO 22000 gıda güvenliği yönetim standartlarına tam uyum.</p>
                     </div>
                   </div>
 
@@ -104,7 +104,7 @@ export default function About() {
                 </div>
                 <h3 className="text-2xl font-display font-bold text-primary mb-4">Misyonumuz</h3>
                 <p className="text-text-slate leading-relaxed text-sm">
-                  Dezenfeksiyon ihtiyacı olan tüm sektörleri modern, güvenli, ekolojik ve kalıntısız dezenfeksiyon teknolojileriyle tanıştırmak. Canlı sağlığını ve endüstriyel makine/ekipman ömrünü tehdit eden geleneksel kimyasal dezenfektanların kullanımını azaltarak sürdürülebilir bir gelecek inşa etmek.
+                  Dezenfeksiyon ihtiyacı olan tüm endüstriyel gıda, içecek, et/tavuk ve su dolum tesislerini modern, güvenli, ekolojik ve kalıntısız dezenfeksiyon teknolojileriyle tanıştırmak. Canlı sağlığını ve endüstriyel makine/ekipman ömrünü tehdit eden geleneksel kimyasal dezenfektanların kullanımını azaltarak sürdürülebilir bir sanayi geleceği inşa etmek.
                 </p>
               </div>
 
@@ -115,7 +115,7 @@ export default function About() {
                 </div>
                 <h3 className="text-2xl font-display font-bold text-primary mb-4">Vizyonumuz</h3>
                 <p className="text-text-slate leading-relaxed text-sm">
-                  Biyogüvenlik ve endüstriyel hijyen denince Türkiye genelinde akla gelen ilk, en güvenilir ve en teknolojik çözüm ortağı olmak. Hidrojen peroksit ve kolloidal gümüş tabanlı kalıntısız koruma standartlarını endüstriyel kılavuzlara ve yasal mevzuatlara öncü standart olarak kazandırmak.
+                  Biyogüvenlik ve endüstriyel dezenfeksiyon denince Türkiye genelinde akla gelen ilk, en güvenilir ve en teknolojik çözüm ortağı olmak. Hidrojen peroksit ve kolloidal gümüş tabanlı kalıntısız koruma standartlarını endüstriyel kılavuzlara ve yasal mevzuatlara öncü standart olarak kazandırmak.
                 </p>
               </div>
 
@@ -134,7 +134,7 @@ export default function About() {
                 { title: 'Çevreye Saygı', text: 'Tüm formüllerimiz doğada %100 çözünür ve zehirli yan ürün bırakmaz.' },
                 { title: 'Bilimsel Doğruluk', text: 'Etkinliğimizi üniversite ve bağımsız laboratuvar analizleriyle kanıtlarız.' },
                 { title: 'Dağıtımda Güven', text: 'Yavuz Selim Ekşi güvencesiyle en hızlı ve doğrudan temin garantisi sunarız.' },
-                { title: 'Müşteri Odaklılık', text: 'Tesisinize veya kliniğinize özel dozajlama ve uygulama eğitimleri sağlarız.' }
+                { title: 'Müşteri Odaklılık', text: 'Tesislerinize özel dozajlama sistemleri kurar ve saha eğitimleri sağlarız.' }
               ].map((val, idx) => (
                 <div key={idx} className="bg-bg-light border border-slate-200/40 p-6 rounded-xl hover:shadow-md transition-shadow">
                   <h4 className="text-lg font-bold text-primary mb-2.5">{val.title}</h4>
@@ -146,7 +146,7 @@ export default function About() {
         </section>
 
       </main>
-
+      
       <Footer />
     </>
   );
